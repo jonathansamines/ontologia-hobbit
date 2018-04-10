@@ -1,0 +1,9 @@
+@prefix relacion:  <https://jonathansamines.com/modelo/relaciones#> .
+
+[
+  personajeViveEnCueva: (?p relacion:esUn ?h), (?h relacion:viveEn ?c) -> (?p relacion:viveEn ?c)
+]
+
+[
+  personajeEsPequeño: (?p relacion:esUn ?h), (?h relacion:tamaño ?s) -> (?p relacion:tamaño ?s)
+]

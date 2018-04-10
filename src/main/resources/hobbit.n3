@@ -1,0 +1,22 @@
+@prefix lugar:     <https://jonathansamines.com/modelo/lugar#> .
+@prefix ser:       <https://jonathansamines.com/modelo/ser-vivo#> .
+@prefix tamaño:    <https://jonathansamines.com/modelo/tamaño#> .
+@prefix cuerpo:    <https://jonathansamines.com/modelo/cuerpo#> .
+@prefix hobbit:    <https://jonathansamines.com/modelo/hobbit/ontologia#> .
+@prefix relacion:  <https://jonathansamines.com/modelo/relaciones#> .
+
+# Hobbit
+cuerpo:Dedo  		relacion:tamaño		tamaño:Gordo .
+lugar:Cueva  		relacion:tamaño		tamaño:Pequeño .
+hobbit:AnilloMagico relacion:esUn  		hobbit:Anillo .
+
+hobbit:Hobbit   relacion:tiene     cuerpo:Dedo    .
+hobbit:Hobbit   relacion:tamaño    tamaño:Pequeño .
+hobbit:Hobbit   relacion:esUnSer   ser:Mitico     .
+hobbit:Hobbit   relacion:viveEn    lugar:Cueva   .
+
+# Personajes de la Pelicula
+hobbit:Frodo	relacion:esUn		hobbit:Hobbit .
+hobbit:Frodo	relacion:tieneUn 	hobbit:AnilloMagico .
+
+hobbit:Bilbo  		relacion:esUn  hobbit:Hobbit .
